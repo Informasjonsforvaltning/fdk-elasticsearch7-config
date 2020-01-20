@@ -1,0 +1,11 @@
+# Default values for Elasticsearch.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+##elasticsearch
+FDK_ES_CLUSTERNAME: elasticsearch
+FDK_ES_CLUSTERNODES: elasticsearch5:9300
+FDK_ES_SECURITY: "false"
+FDK_ES_MEMORY: "3000Mi"
+ES5_IMAGE: docker.elastic.co/elasticsearch/elasticsearch:5.6.9
+ES5_BUSY_IMAGE: busybox
