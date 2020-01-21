@@ -3,12 +3,12 @@ entries:
   elasticsearch:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-01-21T09:26:25.736110965+01:00"
+    created: "2020-01-21T10:20:24.02143941+01:00"
     description: Config for Elasticsearch
-    digest: 914cb478faa7d9b0e5f83391763536e0aea99c021f47e19f39318c82d5ac8be1
+    digest: 1a3981013f90c32fb5d027bb88d696b3a5e1d1c22e2e79104911a76cf13ad8c6
     home: https://github.com/Informasjonsforvaltning/fdk-elasticsearch-config
     name: elasticsearch
     urls:
     - https://informasjonsforvaltning.github.io/fdk-elasticsearch-config/elasticsearch-0.1.0.tgz
     version: 0.1.0
-generated: "2020-01-21T09:26:25.735601595+01:00"
+generated: "2020-01-21T10:20:24.021044956+01:00"
