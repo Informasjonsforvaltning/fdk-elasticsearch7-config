@@ -3,8 +3,8 @@ apiVersion: v1
 metadata:
   creationTimestamp: null
   labels:
-    fdk.service: elasticsearch5-claim0
-  name: elasticsearch5-claim0
+    fdk.service: elasticsearch7-claim0
+  name: elasticsearch7-claim0
   namespace: {{ required "Missing value NAMESPACE" .Values.NAMESPACE }}
 spec: {{ if (.Values.FDK_TEMPDISK) and .Values.FDK_TEMPDISK "true" }}{{ else }}
   storageClassName: ""
