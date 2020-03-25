@@ -1,8 +1,8 @@
-# Default values for Elasticsearch.
+# Default values for Elasticsearch7.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-##elasticsearch
+##elasticsearch7
 FDK_ES_CLUSTERNAME: elasticsearch
 FDK_ES_CLUSTERNODES: elasticsearch7:9300
 FDK_ES_SECURITY: "false"
