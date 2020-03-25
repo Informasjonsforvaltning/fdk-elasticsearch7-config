@@ -45,6 +45,8 @@ spec:
           value: {{ required "Missing value FDK_ES_CLUSTERNAME" .Values.FDK_ES_CLUSTERNAME }}
         - name: xpack.security.enabled
           value: {{ required "Missing value FDK_ES_SECURITY"  .Values.FDK_ES_SECURITY | quote}}
+        - name: cluster.initial_master_nodes
+          value: {{ required "Missing value FDK_ES_CLUSTERNODES" .Values.FDK_ES_CLUSTERNODES }}
         image: {{ required "Missing value ES7_IMAGE" .Values.ES7_IMAGE }}
         imagePullPolicy: Always
         name: elasticsearch7
