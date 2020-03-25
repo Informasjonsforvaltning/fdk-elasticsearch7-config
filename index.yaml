@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  elasticsearch:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-03-25T15:20:28.733093676+01:00"
+    description: Config for Elasticsearch7
+    digest: fa38ea9de53c6cf2b8f1861eb71a080ed1276a206a759a8c333a5a73258344b2
+    home: https://github.com/Informasjonsforvaltning/fdk-elasticsearch7-config
+    name: elasticsearch
+    urls:
+    - https://informasjonsforvaltning.github.io/fdk-elasticsearch7-config/elasticsearch-0.1.0.tgz
+    version: 0.1.0
   elasticsearch7:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-03-25T15:13:45.317185496+01:00"
+    created: "2020-03-25T15:20:28.733285995+01:00"
     description: Config for Elasticsearch7
     digest: 5214754fe48f49f3b6f8be831bc016c1659eb880c472206290f270d0af22a7e0
     home: https://github.com/Informasjonsforvaltning/fdk-elasticsearch7-config
@@ -11,4 +22,4 @@ entries:
     urls:
     - https://informasjonsforvaltning.github.io/fdk-elasticsearch7-config/elasticsearch7-0.1.0.tgz
     version: 0.1.0
-generated: "2020-03-25T15:13:45.316803228+01:00"
+generated: "2020-03-25T15:20:28.732629934+01:00"
