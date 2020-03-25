@@ -4,8 +4,8 @@ metadata:
   annotations:
   creationTimestamp: null
   labels:
-    fdk.service: elasticsearch5
-  name: elasticsearch5
+    fdk.service: elasticsearch7
+  name: elasticsearch7
   namespace: {{ required "Missing value NAMESPACE" .Values.NAMESPACE }}
 spec:
   type: NodePort
@@ -17,6 +17,6 @@ spec:
     port: 9300
     targetPort: 9300
   selector:
-    fdk.service: elasticsearch5
+    fdk.service: elasticsearch7
 status:
   loadBalancer: {}

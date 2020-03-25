@@ -1,20 +1,23 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    fdk.service: elasticsearch5
-  name: elasticsearch5
+    fdk.service: elasticsearch7
+  name: elasticsearch7
   namespace: {{ required "Missing value NAMESPACE" .Values.NAMESPACE }}
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      fdk.service: elasticsearch7
   strategy:
     type: Recreate
   template:
     metadata:
       creationTimestamp: null
       labels:
-        fdk.service: elasticsearch5
+        fdk.service: elasticsearch7
     spec:
       initContainers:
         - name: increase-the-vm-max-map-count
@@ -32,7 +35,7 @@ spec:
             - "777"
             - /usr/share/elasticsearch/data
           volumeMounts:
-          - name: elasticsearch5-claim0
+          - name: elasticsearch7-claim0
             mountPath: "/usr/share/elasticsearch/data"
           securityContext:
             privileged: true
@@ -42,9 +45,9 @@ spec:
           value: {{ required "Missing value FDK_ES_CLUSTERNAME" .Values.FDK_ES_CLUSTERNAME }}
         - name: xpack.security.enabled
           value: {{ required "Missing value FDK_ES_SECURITY"  .Values.FDK_ES_SECURITY | quote}}
-        image: {{ required "Missing value ES5_IMAGE" .Values.ES5_IMAGE }}
+        image: {{ required "Missing value ES7_IMAGE" .Values.ES7_IMAGE }}
         imagePullPolicy: Always
-        name: elasticsearch5
+        name: elasticsearch7
         ports:
         - containerPort: 9200
         - containerPort: 9300
@@ -53,10 +56,10 @@ spec:
             memory: {{ required "Missing value FDK_ES_MEMORY" .Values.FDK_ES_MEMORY | quote }}
         volumeMounts:
         - mountPath: /usr/share/elasticsearch/data
-          name: elasticsearch5-claim0
+          name: elasticsearch7-claim0
       restartPolicy: Always
       volumes:
-      - name: elasticsearch5-claim0
+      - name: elasticsearch7-claim0
         persistentVolumeClaim:
-          claimName: elasticsearch5-claim0
+          claimName: elasticsearch7-claim0
 status: {}
