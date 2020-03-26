@@ -16,12 +16,6 @@ spec:
   - name: "9300"
     port: 9300
     targetPort: 9300
-  - name: "7200"
-    port: 7200
-    targetPort: 9200
-  - name: "7300"
-    port: 7300
-    targetPort: 9300
   selector:
     fdk.service: elasticsearch7
 status:
